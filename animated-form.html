@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="styles.css">
+     <title>Registration and Login Form</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+     <div class="container">
+          <div class="signup-form">
+               <h2>Sign Up</h2>
+               <div class="inputBox">
+                    <input type="text" name="" required>
+                    <i class="fa-regular fa-user"></i>
+                    <label>Username</label>
+               </div>
+               <div class="inputBox">
+                    <input type="text" name="" required>
+                    <i class="fa-regular fa-envelope"></i>
+                    <label>Email Address</label>
+               </div>
+               <div class="inputBox">
+                    <input type="text" name="" required>
+                    <i class="fa-solid fa-lock"></i>
+                    <label>Create Passsword</label>
+               </div>
+               <div class="inputBox">
+                    <input type="text" name="" required>
+                    <i class="fa-solid fa-lock"></i>
+                    <label>Confirm password</label>
+               </div>
+               <div class="inputBox">
+                    <input type="submit" value="Create Account">
+               </div>
+
+               <p>Already have an account? <a href="#" class="login">Login</a></p>
+          </div>
+          <div class="signin">
+                <h2>Login</h2>
+                <div class="inputBox">
+                    <input type="text" name="" required>
+                    <i class="fa-regular fa-user"></i>
+                    <label>Username</label>
+                </div>
+                <div class="inputBox">
+                    <input type="text" name="" required>
+                    <i class="fa-solid fa-lock"></i>
+                    <label>Passsword</label>
+               </div>
+
+               <div class="inputBox">
+                    <input type="submit" value="login">
+               </div>
+
+               <p>Don't have an account yet? <a href="#" class="create">Sign Up</a></p>
+          </div>
+     </div>
+
+     <script>
+          let login = document.querySelector('.login');
+          let create = document.querySelector('.create');
+          let container = document.querySelector('.container');
+
+          login.onclick = function() {
+               container.classList.add('signinForm');
+          }
+
+          create.onclick = function() {
+               container.classList.remove('signinForm');
+          }
+     </script>
+</body>
+</html>
