@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital@1&display=swap');
+
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: 'Cormorant Garamond', serif;
+}
+
+body{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     min-height: 100vh;
+     background: #223243;
+}
+
+.container{
+     padding: 40px;
+     border-radius: 20px;
+     border: 8px solid #223243;
+     box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.35), inset -5px -5px 15px rgba(255, 255, 255, 0.1), inset 5px 5px 15px rgba(0, 0, 0, 0.35);
+}
+
+.signup-form, .signin{
+     display: flex;
+     justify-content: center;
+     flex-direction: column;
+     align-items: center;
+     gap: 25px;
+}
+
+.container .signin, .signinForm .signup-form {
+     display: none;
+}
+
+.signinForm .signin{
+     display: flex;
+} 
+
+.signup-form h2, .signin h2{
+     color: #fff;
+     font-size: 30px;
+     letter-spacing: 0.1em;
+     font-weight: 500;
+}
+
+.signup-form .inputBox, .signin .inputBox{
+     position: relative;
+     width: 300px;
+}
+
+.inputBox input {
+    padding: 12px 10px 12px 48px;
+     border: none;
+     width: 100%;
+     background: #223243;
+     color: #fff;
+     border: 1px solid rgba(0, 0, 0, 0.1);
+     font-size: 1em;
+     border-radius: 25px;
+     box-shadow: -5px -5px -15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.35);
+     transition: 0.5s;
+     outline: none;
+}
+
+.inputBox input:valid, .inputBox input:focus{
+     border: 1px solid #00dfc4;
+     box-shadow: -5px -5px -15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.35), inset -5px -5px 15px rgba(255, 255, 255, 0.1), inset 5px 5px 15px rgba(0, 0, 0, 0.35);
+}
+
+.inputBox input:valid ~ label, .inputBox input:focus ~ label{
+     /* top: -30px; */
+     transform: translateX(25px)  translateY(-7px);
+     padding: 0 8px;
+     background: #223243;
+     border-radius: 10px;
+     border: 1px solid black;
+     left: 0;
+     color: #00dfc4;
+     font-size: 0.8em;
+     letter-spacing: 0.1em;
+     
+    
+}
+
+.inputBox label{
+     position: absolute;
+     left: 0;
+     padding: 12px 10px 12px 48px;
+     pointer-events: none;
+     font-size: 1em;
+     font-weight: 300;
+     transition: 0.5s;
+     letter-spacing: 0.05em;
+}
+
+.inputBox i{
+     position: absolute;
+     left: 15px;
+     top: 15px;
+     width: 25px;
+     padding: 2px 0;
+     padding-right: 8px;
+     color: #00dfc4;
+     border-right: 1px solid #00dfc4;
+}
+
+.inputBox input[type="submit"]{
+     background: #00dfc4;
+     color: #fff;
+     padding: 10px 0;
+     font-size: 1.5em;
+     font-weight: 500;
+     letter-spacing: 0.1em;
+     cursor: pointer;
+     box-shadow: -5px -5px -15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.35), inset -5px -5px 15px rgba(255, 255, 255, 0.1), inset 5px 5px 15px rgba(0, 0, 0, 0.35);
+}
+
+.container .signup-form p{
+     color:rgba(255, 255, 255, 0.1);
+     font-size: 1.3em;
+     font-weight: 300;
+}
+
+.signup-form p a ,.signin p a{
+     color: #00dfc4;
+     text-decoration: none;
+     font-weight: 500;
+}
+
+.signup-form p a:hover, .signin p a:hover{
+     color: #fff;
+     text-decoration: underline;
+}
